@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Handle POST requests with Flask</title>
+	</head>
+	<body>
+		<div>
+			<div>
+				<h1>POST request with Flask</h1>
+			</div>
+			<div>
+				<form method="post" action="{{ url_for('change') }}">
+					<label for="ledcolor">Enter LED Color:</label>
+					<input type="text" name="ledcolor" /><br />
+					<label for="brightness">Enter Brightness (0-100):</label>
+					<input type="text" name="brightness" /><br />
+					<input type="submit" />
+				</form>
+			</div>
+			<div>
+				<h1>JSON Request</h1>
+			</div>
+			<div>
+				<form method="post" id="jsonform" action={{ url_for('changeJSON') }}>
+					<label for="json">Enter JSON request</label>
+					<input type="submit">
+				</form>
+				<textarea name="json" form="jsonform" rows="5" cols="50"></textarea>
+			</div>
+			<div>
+				<h1>XML Request</h1>
+			</div>
+			<div>
+				<form method="post" id="xmlform" action={{ url_for('changeXML') }}>
+					<label for="xml">Enter XML request</label>
+					<input type="submit">
+				</form>
+				<textarea name="xml" form="xmlform" rows="5" cols="50"></textarea>
+			</div>
+			<div>
+				<h1>YAML Request</h1>
+			</div>
+			<div>
+				<form method="post" id="yamlform" action={{ url_for('changeYAML') }}>
+					<label for="yaml">Enter YAML request</label>
+					<input type="submit">
+				</form>
+				<textarea name="yaml" form="yamlform" rows="5" cols="50"></textarea>
+			</div>
+		</div>
+	</body>	
+</html>
